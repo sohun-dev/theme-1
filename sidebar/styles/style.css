@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
+    font-family: "Poppins", serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.primary-btn {
+    background: #192434;
+    padding: 12px 24px;
+    border-radius: 25px;
+    color: white
+}
+
+
+.slide-in{
+    transform: translateX(0);
+    transition: transform .5s ease;
+}
+
+.slide-out-left{
+    transform: translateX(-100%);
+    transition: transform .5s ease;
+}
+
+.slide-out-right{
+    transform: translateX(100%);
+    transition: transform .5s ease;
+}
+
+
+.hidden-sidebar {
+    transform: translateX(80%); /* Keeps sidebar partially visible on the right */
+    transition: transform 0.5s ease;
+}
+
+.visible-sidebar {
+    transform: translateX(0);
+    transition: transform 0.5s ease;
+}
+
+/* Sidebar Button Transition */
+.button-visible {
+    transform: translateX(0);
+    transition: transform 0.5s ease;
+}
+
+.button-hidden {
+    transform: translateX(-80%);
+    transition: transform 0.5s ease;
+}

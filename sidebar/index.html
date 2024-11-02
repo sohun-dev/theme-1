@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <title>Sidebar</title>
+</head>
+
+<body class="min-h-screen bg-gray-100 flex justify-center items-center relative">
+
+    <section class="flex justify-end w-full max-w-screen-lg relative">
+        <div class="absolute top-4 right-4" id="button-container">
+            <button id="sidebar-button" class="w-12 h-12 bg-black text-white text-3xl rounded-full m-0 button-visible">
+                <img src="./assets/cross.png" alt="Toggle Sidebar" id="sidebar-icon">
+            </button>
+        </div>
+        
+        <div id="sidebar" class="hidden-sidebar fixed top-0 right-0 min-h-screen bg-white px-4 w-[380px] shadow-lg">
+            <div class="w-full text-center mb-16 pt-12">
+                <img class="mx-auto w-16" src="./assets/user.png" alt="User Icon">
+                <h2 class="font-semibold mt-4 text-xl">SIGN IN</h2>
+            </div>
+
+            <div>
+                <div id="tab-button-container" class="flex justify-between items-center text-lg my-8 border-b">
+                    <button id="login-tab-button" class="px-12 py-4 border-b-2 border-neutral-800">LOGIN</button>
+                    <button id="register-tab-button" class="px-12 py-4 border-b-2 border-transparent">REGISTER</button>
+                </div>
+
+                <form id="login-form" action="" class="slide-in">
+                    <div class="flex flex-col items-center gap-6">
+                        <div class="w-full">
+                            <label class="text-[#1c304a85] block pb-3">Username/email *</label>
+                            <input class="w-full bg-[#fafbfc] border-2 border-[#DFE1E6] outline-[#8a8a8a] px-4 py-2 rounded-lg" type="text" placeholder="you@example.com" required>
+                        </div>
+                        <div class="w-full">
+                            <label class="text-[#1c304a85] block pb-3">Password *</label>
+                            <input class="w-full bg-[#fafbfc] border-2 border-[#DFE1E6] outline-[#8a8a8a] px-4 py-2 rounded-lg" type="password" placeholder="Enter Password" required>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2 my-8">
+                        <input class="w-5 h-5 text-blue-600 border-2 border-gray-300 rounded focus:ring-[#192434]" type="checkbox" name="remember" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+
+                    <div class="w-full mt-12">
+                        <input class="w-full uppercase primary-btn font-semibold bg-blue-500 text-white py-2 rounded" type="submit" value="LOGIN">
+                        <p class="text-center my-8"><a href="#" class="text-blue-500">Forget Password</a></p>
+                    </div>
+                </form>
+
+                <form id="register-form" class="hidden" action="">
+                    <h1>Register Form</h1>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="/scripts/script.js"></script>
+</body>
+
+</html>

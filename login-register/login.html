@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <title>Login</title>
+</head>
+
+<body class="min-h-screen flex justify-center items-center bg-[#f4f4f4]">
+    <section id="login-section" class=" w-[770px] ">
+
+        <div class="border rounded-[36px] bg-white overflow-hidden">
+
+            <div class="p-8">
+                <div class="mt-4 mb-16">
+                    <h1 class="text-center text-4xl font-medium">Login</h1>
+                </div>
+
+
+                <form action="">
+
+                    <div class="flex flex-col md:flex-row items-center gap-6 ">
+                        <div class="w-full">
+                            <label class="text-[#1c304a85] block pb-3" for="">Username/email</label>
+                            <input class="w-full bg-[#fafbfc] border-2 border-[#DFE1E6] outline-[#8a8a8a] 
+                                px-4 py-2 rounded-lg " type="text" placeholder="you@example.com" required>
+                        </div>
+                        <div class="w-full">
+                            <label class="text-[#1c304a85] block pb-3" for="">Password</label>
+                            <input class="w-full bg-[#fafbfc] border-2 border-[#DFE1E6] outline-[#8a8a8a] 
+                                px-4 py-2 rounded-lg" type="text" placeholder="Enter Password" required>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center mt-6">
+                        <div>
+                            <p class="text-[#1c304a85]">New customer? <a href="register.html"
+                                    class="text-secondary font-semibold">Create account</a></p>
+                        </div>
+
+                        <input class="uppercase secondary-btn font-semibold" type="submit" value="LOGIN">
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="/scripts/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+/* Poppins Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    font-family: "Poppins", serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.text-secondary{
+    color: #9a9e0a;
+}
+
+
+.secondary-btn{
+    background: #dbe112;
+    padding: 8px 24px;
+    border-radius: 25px;
+}
+
+
+.secondary-btn:hover{
+    background: #9a9e0a;
+    padding: 8px 24px;
+    border-radius: 25px;
+    color: white;
+    transition-duration: 500ms;
+}
+
+
+#login-section .border-shadow {
+    box-shadow: 1px 1px 5px 2px;
+}
