@@ -16,17 +16,17 @@
 }
 
 
-.slide-in{
+.slide-in {
     transform: translateX(0);
     transition: transform .5s ease;
 }
 
-.slide-out-left{
+.slide-out-left {
     transform: translateX(-100%);
     transition: transform .5s ease;
 }
 
-.slide-out-right{
+.slide-out-right {
     transform: translateX(100%);
     transition: transform .5s ease;
 }
@@ -34,27 +34,35 @@
 
 
 /* Sidebar class */
-.hidden-sidebar {
-    transform: translateX(100%); /* Keeps sidebar partially visible on the right */
-    transition: transform 0.5s ease;
+.sidebar-out {
+    transform: translate(110%);
+    transition: transform 0.5s;
 }
 
-.visible-sidebar {
-    transform: translateX(0);
-    transition: transform 0.5s ease, opacity 0.5s ease;
+.sidebar-in {
+    transform: translate(0);
+    transition: transform 0.5s;
 }
 
 /* Sidebar Button Transition */
 .button-visible {
-    transform: translateX(0);
-    transition: transform 0.5s ease;
+    transform: translate(850%);
+    /* transition: transform 0.5s ease; */
 }
 
 .button-hidden {
-    transform: translateX(-100%);
-    transition: transform 0.5s ease;
+    transform: translate(100%);
+    /* transition: transform 0.5s ease; */
 }
 
-.hidden{
-    display: none;
+
+
+
+@media screen and (min-width: 778px) and (max-width: 1024px) {
+
+    .button-visible {
+        transform: translateX(-100%);
+        transition: transform 0.5s ease;
+    }
+
 }

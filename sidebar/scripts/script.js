@@ -53,45 +53,60 @@ sidebarButton.addEventListener('click', () => {
     sidebarVisible = !sidebarVisible;
 
     if (sidebarVisible) {
-       
-        
-        sidebar.classList.add('visible-sidebar');
-        sidebar.classList.remove('hidden','hidden-sidebar');
-        // sidebar.classList.remove('hidden');
-        
 
-        // sidebar.addEventListener('transitionend', () => {
-        //     if (!sidebarVisible) {
-        //         sidebar.classList.add('hidden');
-                
-        //     }
-        // }, { once: true });
-        
+        // sidebar.style.transformcl= 'translateX(100%)';
+        // sidebar.style.transition = 'transform 0.5s ease';
+        //sidebar.classList.add('sidebar-visible');
+        sidebar.classList.add('sidebar-in')
+        sidebar.classList.remove('sidebar-out');
+        sidebar.classList.remove('hidden');
 
-        // Slide button slightly inward
         sidebarButton.classList.remove('button-visible');
         sidebarButton.classList.add('button-hidden');
 
-        // Change icon to 'cross'
-        sidebarIcon.src = './assets/cross.png';
-    } else {
-        // Partially hide sidebar
-        sidebar.classList.remove('visible-sidebar');
-        sidebar.classList.add('hidden-sidebar');
+        
+        // sidebar.style.transform = 'translateX(0)';
+        // sidebar.style.transition = 'transform 0.5s ease-in';
 
-        // Reset button position to corner
+        // if (sidebar.style.transform >= 'translateX(0)') {
+        //     setTimeout(() => {
+        //         sidebar.classList.remove('hidden');
+                
+        //     }, 500);
+        // }
+
+        //sidebar.classList.add('sidebar-visible');
+
+        // if (sidebar.style.transform <= 'translateX(100%)') {
+        //     sidebar.style.transform = 'translateX(0)'
+        //     sidebar.style.transition = 'transform 0.5s ease';
+
+        
+        // }
+
+
+
+
+        sidebarIcon.src = './assets/cross.png';
+
+    } else {
+
+        sidebar.classList.remove('sidebar-in');
+        sidebar.classList.add('sidebar-out');
+
         sidebarButton.classList.remove('button-hidden');
         sidebarButton.classList.add('button-visible');
         sidebarIcon.src = './assets/login.png';
 
-        // Wait for the transition to end before adding 'hidden' class
-        sidebar.addEventListener('transitionend', () => {
-            if (!sidebarVisible) {
-                sidebar.classList.add('hidden');
-                
-            }
-        }, { once: true });
+        // if (sidebar.style.transform <= 'translateX(100%)') {
+        //     setTimeout(() => {
+        //         sidebar.classList.add('hidden');
+        //     }, 500);
+        // }
 
-      
+
+
+        sidebar.classList.add('hidden');
+
     }
 });

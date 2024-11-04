@@ -11,23 +11,24 @@
     <title>Sidebar</title>
 </head>
 
-<body class="min-h-screen bg-gray-100 flex justify-center items-center relative">
+<body class="min-h-screen bg-gray-100 flex justify-center relative">
 
     <section class="flex justify-end w-full max-w-screen-lg">
         <div class="" id="button-container">
-            <button id="sidebar-button" class="w-12 h-12 bg-white text-3xl rounded-full m-0 button-visible">
+            <button id="sidebar-button" class="w-12 h-12 bg-white text-3xl rounded-full m-0 button-visible mt-5">
                 <img src="./assets/login.png" alt="Toggle Sidebar" id="sidebar-icon">
             </button>
         </div>
-        
-        <div id="sidebar" class="hidden-sidebar min-h-screen bg-white px-4 w-[380px] shadow-lg absolute top-0 right-[0%]">
-            <div class="w-full text-center mb-16 pt-12">
+
+        <div id="sidebar"
+            class="sidebar-out hidden min-h-screen bg-white px-4 w-[380px] shadow-lg absolute top-0 hidden-sidebar right-[0%]">
+            <div class="w-full text-center mb-8 pt-8">
                 <img class="mx-auto w-16" src="./assets/user.png" alt="User Icon">
                 <h2 class="font-semibold mt-4 text-xl">SIGN IN</h2>
             </div>
 
             <div>
-                <div id="tab-button-container" class="flex justify-between items-center text-lg my-8 border-b">
+                <div id="tab-button-container" class="flex justify-between items-center text-lg my-8 border-b text-[#192739]">
                     <button id="login-tab-button" class="px-12 py-4 border-b-2 border-neutral-800">LOGIN</button>
                     <button id="register-tab-button" class="px-12 py-4 border-b-2 border-transparent">REGISTER</button>
                 </div>
@@ -36,27 +37,64 @@
                     <div class="flex flex-col items-center gap-6">
                         <div class="w-full">
                             <label class="text-[#1c304a85] block pb-3">Username/email *</label>
-                            <input class="w-full bg-[#fafbfc] border-2 border-[#DFE1E6] outline-[#8a8a8a] px-4 py-2 rounded-lg" type="text" placeholder="you@example.com" required>
+                            <input
+                                class="w-full bg-[#fafbfc] border-2 border-[#DFE1E6] outline-[#8a8a8a] px-4 py-2 rounded-lg"
+                                type="text" placeholder="you@example.com" required>
                         </div>
                         <div class="w-full">
                             <label class="text-[#1c304a85] block pb-3">Password *</label>
-                            <input class="w-full bg-[#fafbfc] border-2 border-[#DFE1E6] outline-[#8a8a8a] px-4 py-2 rounded-lg" type="password" placeholder="Enter Password" required>
+                            <input
+                                class="w-full bg-[#fafbfc] border-2 border-[#DFE1E6] outline-[#8a8a8a] px-4 py-2 rounded-lg"
+                                type="password" placeholder="Enter Password" required>
                         </div>
                     </div>
 
                     <div class="flex items-center gap-2 my-8">
-                        <input class="w-5 h-5 text-blue-600 border-2 border-gray-300 rounded focus:ring-[#192434]" type="checkbox" name="remember" id="remember">
+                        <input class="w-5 h-5 text-{#192434} border-2 border-gray-300 rounded focus:ring-[#192434]"
+                            type="checkbox" name="remember" id="remember">
                         <label for="remember">Remember me</label>
                     </div>
 
                     <div class="w-full mt-12">
-                        <input class="w-full uppercase primary-btn font-semibold bg-blue-500 text-white py-2 rounded" type="submit" value="LOGIN">
-                        <p class="text-center my-8"><a href="#" class="text-blue-500">Forget Password</a></p>
+                        <input class="w-full uppercase primary-btn font-semibold bg-[#192434] text-white py-2 rounded-3xl"
+                            type="submit" value="LOGIN">
+                        <p class="text-center my-8"><a href="#" class="text-[#192434]">Forget Password</a></p>
                     </div>
                 </form>
 
                 <form id="register-form" class="hidden" action="">
-                    <h1>Register Form</h1>
+                    <div class="flex flex-col items-center gap-6 text-[#192739]">
+                        <div class="w-full">
+                            <label class="text-[#1c304a85] block pb-3">Username *</label>
+                            <input
+                                class="w-full bg-[#fafbfc] border-2 border-[#DFE1E6] outline-[#8a8a8a] px-4 py-2 rounded-lg"
+                                type="text" placeholder="Enter Username" required>
+                        </div>
+                        <div class="w-full">
+                            <label class="text-[#1c304a85] block pb-3">Email *</label>
+                            <input
+                                class="w-full bg-[#fafbfc] border-2 border-[#DFE1E6] outline-[#8a8a8a] px-4 py-2 rounded-lg"
+                                type="email" placeholder="you@example.com" required>
+                        </div>
+                        <div class="w-full">
+                            <label class="text-[#1c304a85] block pb-3">Password *</label>
+                            <input
+                                class="w-full bg-[#fafbfc] border-2 border-[#DFE1E6] outline-[#8a8a8a] px-4 py-2 rounded-lg"
+                                type="password" placeholder="Enter Password" required>
+                        </div>
+                    </div>
+
+                    <div class="w-full text-[#192739]">
+                        <p class="text-justify py-4">
+                            Your personal data will be used to support your experience throughout this website, to
+                            manage access to your account, and for other purposes described in our privacy policy.
+                        </p>
+                    </div>
+
+                    <div class="w-full mt-4">
+                        <input class="w-full uppercase primary-btn font-semibold bg-[#192434] text-white py-2 rounded-3xl"
+                            type="submit" value="REGISTER">
+                    </div>
                 </form>
             </div>
         </div>
