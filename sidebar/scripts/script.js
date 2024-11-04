@@ -91,7 +91,7 @@ sidebarButtonSm.addEventListener('click', () => {
 
 
         sidebar.classList.remove('sidebar-in');
-        sidebar.classList.add('sidebar-out');
+        sidebar.classList.remove('sidebar-out');
 
         sidebarIconSm.src = './assets/login.png';
 
@@ -101,7 +101,7 @@ sidebarButtonSm.addEventListener('click', () => {
 
     } else {
 
-        sidebar.classList.add('sidebar-in')
+        sidebar.classList.remove('sidebar-in')
         sidebar.classList.remove('sidebar-out');
         sidebar.classList.remove('hidden');
 

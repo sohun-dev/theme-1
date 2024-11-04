@@ -8,10 +8,6 @@
 }
 
 
-#button-container{
-    display: block;
-}
-
 
 .primary-btn {
     background: #192434;
@@ -68,10 +64,12 @@
         display: none;
     }
 
-    /* #sidebar{
+
+
+    #sidebar{
         position: relative !important;
         display: block !important;
-    } */
+    }
 
 }
 
