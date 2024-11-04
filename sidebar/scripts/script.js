@@ -53,9 +53,20 @@ sidebarButton.addEventListener('click', () => {
     sidebarVisible = !sidebarVisible;
 
     if (sidebarVisible) {
-        // Make sidebar fully visible
+       
+        
         sidebar.classList.add('visible-sidebar');
-        sidebar.classList.remove('hidden-sidebar');
+        sidebar.classList.remove('hidden','hidden-sidebar');
+        // sidebar.classList.remove('hidden');
+        
+
+        // sidebar.addEventListener('transitionend', () => {
+        //     if (!sidebarVisible) {
+        //         sidebar.classList.add('hidden');
+                
+        //     }
+        // }, { once: true });
+        
 
         // Slide button slightly inward
         sidebarButton.classList.remove('button-visible');
@@ -71,8 +82,16 @@ sidebarButton.addEventListener('click', () => {
         // Reset button position to corner
         sidebarButton.classList.remove('button-hidden');
         sidebarButton.classList.add('button-visible');
-
-        // Change icon to 'login' when sidebar is hidden
         sidebarIcon.src = './assets/login.png';
+
+        // Wait for the transition to end before adding 'hidden' class
+        sidebar.addEventListener('transitionend', () => {
+            if (!sidebarVisible) {
+                sidebar.classList.add('hidden');
+                
+            }
+        }, { once: true });
+
+      
     }
 });
