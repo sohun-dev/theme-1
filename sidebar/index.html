@@ -12,11 +12,11 @@
     <title>Sidebar</title>
 </head>
 
-<body class="md:min-h-screen bg-gray-100 flex justify-center relative">
+<body class="md:min-h-screen bg-gray-100 flex justify-center md:relative">
 
     <section class="flex justify-end w-full md:max-w-screen-lg">
         <div class="" id="button-container">
-            <button id="sidebar-button" class="w-8 h-8 md:w-12 md:h-12 bg-white text-3xl rounded-full button-visible mt-3 md:mt-5">
+            <button id="sidebar-button" class="w-12 h-12 bg-white text-3xl rounded-full button-visible mt-3 md:mt-5">
                 <img src="./assets/login.png" alt="Toggle Sidebar" id="sidebar-icon">
             </button>
         </div>
@@ -29,7 +29,7 @@
         </div>
 
         <div id="sidebar"
-            class="md:sidebar-out hidden min-h-screen bg-white px-4 w-[380px] shadow-lg md:absolute top-0 hidden-sidebar right-[0%] ">
+            class="md:sidebar-out block md:hidden md:min-h-screen bg-white px-4 w-[380px] shadow-lg md:absolute md:top-0 md:hidden-sidebar md:right-[0%] ">
 
             <div class="w-full text-center py-4 md:py-8">
                 <img class="mx-auto w-16" src="./assets/user.png" alt="User Icon">
