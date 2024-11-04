@@ -8,6 +8,11 @@
 }
 
 
+#button-container{
+    display: block;
+}
+
+
 .primary-btn {
     background: #192434;
     padding: 12px 24px;
@@ -36,25 +41,35 @@
 /* Sidebar class */
 .sidebar-out {
     transform: translate(110%);
-    transition: transform 0.5s;
 }
 
 .sidebar-in {
     transform: translate(0);
-    transition: transform 0.5s;
 }
 
 /* Sidebar Button Transition */
 .button-visible {
     transform: translate(850%);
-    /* transition: transform 0.5s ease; */
 }
 
 .button-hidden {
     transform: translate(100%);
-    /* transition: transform 0.5s ease; */
 }
 
+
+
+@media screen and (max-width: 778px) {
+
+    #button-container{
+        display: none;
+    }
+
+    #sidebar{
+        position: relative !important;
+        display: block !important;
+    }
+
+}
 
 
 
@@ -66,3 +81,5 @@
     }
 
 }
+
+

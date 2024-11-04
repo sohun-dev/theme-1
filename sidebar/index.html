@@ -8,27 +8,37 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./styles/style.css">
 
+
     <title>Sidebar</title>
 </head>
 
-<body class="min-h-screen bg-gray-100 flex justify-center relative">
+<body class="md:min-h-screen bg-gray-100 flex justify-center relative">
 
-    <section class="flex justify-end w-full max-w-screen-lg">
+    <section class="flex justify-end w-full md:max-w-screen-lg">
         <div class="" id="button-container">
-            <button id="sidebar-button" class="w-12 h-12 bg-white text-3xl rounded-full m-0 button-visible mt-5">
+            <button id="sidebar-button" class="w-8 h-8 md:w-12 md:h-12 bg-white text-3xl rounded-full button-visible mt-3 md:mt-5">
                 <img src="./assets/login.png" alt="Toggle Sidebar" id="sidebar-icon">
             </button>
         </div>
 
+        <div class="md:hidden absolute left-12 z-50">
+            <button id="sidebar-button-sm"
+                class=" md:hidden w-8 h-8 bg-gray-200 text-3xl rounded-full m-0 button-visible mt-3">
+                <img src="./assets/cross.png" alt="Toggle Sidebar" id="sidebar-icon-sm">
+            </button>
+        </div>
+
         <div id="sidebar"
-            class="sidebar-out hidden min-h-screen bg-white px-4 w-[380px] shadow-lg absolute top-0 hidden-sidebar right-[0%]">
-            <div class="w-full text-center mb-8 pt-8">
+            class="md:sidebar-out hidden min-h-screen bg-white px-4 w-[380px] shadow-lg md:absolute top-0 hidden-sidebar right-[0%] ">
+
+            <div class="w-full text-center py-4 md:py-8">
                 <img class="mx-auto w-16" src="./assets/user.png" alt="User Icon">
                 <h2 class="font-semibold mt-4 text-xl">SIGN IN</h2>
             </div>
 
             <div>
-                <div id="tab-button-container" class="flex justify-between items-center text-lg my-8 border-b text-[#192739]">
+                <div id="tab-button-container"
+                    class="flex justify-between items-center text-lg my-4 md:my-8 border-b text-[#192739]">
                     <button id="login-tab-button" class="px-12 py-4 border-b-2 border-neutral-800">LOGIN</button>
                     <button id="register-tab-button" class="px-12 py-4 border-b-2 border-transparent">REGISTER</button>
                 </div>
@@ -56,7 +66,8 @@
                     </div>
 
                     <div class="w-full mt-12">
-                        <input class="w-full uppercase primary-btn font-semibold bg-[#192434] text-white py-2 rounded-3xl"
+                        <input
+                            class="w-full uppercase primary-btn font-semibold bg-[#192434] text-white py-2 rounded-3xl"
                             type="submit" value="LOGIN">
                         <p class="text-center my-8"><a href="#" class="text-[#192434]">Forget Password</a></p>
                     </div>
@@ -91,8 +102,9 @@
                         </p>
                     </div>
 
-                    <div class="w-full mt-4">
-                        <input class="w-full uppercase primary-btn font-semibold bg-[#192434] text-white py-2 rounded-3xl"
+                    <div class="w-full my-4">
+                        <input
+                            class="w-full uppercase primary-btn font-semibold bg-[#192434] text-white py-2 rounded-3xl"
                             type="submit" value="REGISTER">
                     </div>
                 </form>

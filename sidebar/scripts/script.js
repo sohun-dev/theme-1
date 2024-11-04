@@ -7,6 +7,8 @@ const registerForm = document.getElementById('register-form');
 const sidebar = document.getElementById('sidebar');
 const sidebarButton = document.getElementById('sidebar-button');
 const sidebarIcon = document.getElementById('sidebar-icon');
+const sidebarButtonSm = document.getElementById('sidebar-button-sm');
+const sidebarIconSm = document.getElementById('sidebar-icon-sm')
 let sidebarVisible = false;
 
 
@@ -54,9 +56,6 @@ sidebarButton.addEventListener('click', () => {
 
     if (sidebarVisible) {
 
-        // sidebar.style.transformcl= 'translateX(100%)';
-        // sidebar.style.transition = 'transform 0.5s ease';
-        //sidebar.classList.add('sidebar-visible');
         sidebar.classList.add('sidebar-in')
         sidebar.classList.remove('sidebar-out');
         sidebar.classList.remove('hidden');
@@ -64,30 +63,9 @@ sidebarButton.addEventListener('click', () => {
         sidebarButton.classList.remove('button-visible');
         sidebarButton.classList.add('button-hidden');
 
-        
-        // sidebar.style.transform = 'translateX(0)';
-        // sidebar.style.transition = 'transform 0.5s ease-in';
-
-        // if (sidebar.style.transform >= 'translateX(0)') {
-        //     setTimeout(() => {
-        //         sidebar.classList.remove('hidden');
-                
-        //     }, 500);
-        // }
-
-        //sidebar.classList.add('sidebar-visible');
-
-        // if (sidebar.style.transform <= 'translateX(100%)') {
-        //     sidebar.style.transform = 'translateX(0)'
-        //     sidebar.style.transition = 'transform 0.5s ease';
-
-        
-        // }
-
-
-
-
         sidebarIcon.src = './assets/cross.png';
+
+
 
     } else {
 
@@ -98,15 +76,37 @@ sidebarButton.addEventListener('click', () => {
         sidebarButton.classList.add('button-visible');
         sidebarIcon.src = './assets/login.png';
 
-        // if (sidebar.style.transform <= 'translateX(100%)') {
-        //     setTimeout(() => {
-        //         sidebar.classList.add('hidden');
-        //     }, 500);
-        // }
+        sidebar.classList.add('hidden');
+
+    }
+});
 
 
+sidebarButtonSm.addEventListener('click', () => {
+    sidebarVisible = !sidebarVisible;
+
+    if (sidebarVisible) {
+
+
+
+
+        sidebar.classList.remove('sidebar-in');
+        sidebar.classList.add('sidebar-out');
+
+        sidebarIconSm.src = './assets/login.png';
 
         sidebar.classList.add('hidden');
+
+
+
+    } else {
+
+        sidebar.classList.add('sidebar-in')
+        sidebar.classList.remove('sidebar-out');
+        sidebar.classList.remove('hidden');
+
+        sidebarIconSm.src = './assets/cross.png';
+
 
     }
 });
